@@ -11,5 +11,9 @@
       set_fact:
         license_var: "{{ tower_license | from_json }}"
 
+    - name: ADD A KEY/VAL PAIR
+      set_fact:
+        license_var: "{{ license_var | combine({'eula_accepted': 'true'}) }}"
+
     - name: DISPLAY THE NEW VAR
       debug: var=license_var
