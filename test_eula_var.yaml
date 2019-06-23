@@ -5,11 +5,11 @@
   tasks:
     - name: DEBUG THE INPUT
       debug:
-        var: tower_license.keys()
+        var: tower_license
 
-     # - name: CONVERT VAR TO JSON
-    #   set_fact:
-    #     license_var: "{{ tower_license | from_json }}"
+    - name: CONVERT VAR TO JSON
+      set_fact:
+        license_var: "{{ tower_license | from_json }}"
 
-    # - name: DISPLAY THE NEW VAR
-    #   debug: var=license_var
+    - name: DISPLAY THE NEW VAR
+      debug: var=license_var
