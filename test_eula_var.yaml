@@ -1,0 +1,15 @@
+---
+- name: TEST INSERTING A KEY VAL PAIR TO A JSON INPUT
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: DEBUG THE INPUT
+      debug:
+        var: tower_license
+
+     # - name: CONVERT VAR TO JSON
+    #   set_fact:
+    #     license_var: "{{ tower_license | from_json }}"
+
+    # - name: DISPLAY THE NEW VAR
+    #   debug: var=license_var
